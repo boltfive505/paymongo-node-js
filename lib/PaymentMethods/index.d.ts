@@ -1,4 +1,4 @@
-import { PaymentMethodParams, PaymentMethodResponse } from "./types";
+import { PaymentMethodParams, PaymentMethodResponse } from './types';
 declare class PaymentMethods {
     private secret;
     private path;

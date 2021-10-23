@@ -11,13 +11,3 @@ export interface BillingDetails {
   email: string;
   phone: string;
 }
-
-export enum CardType {
-  card = "card",
-  paymaya = "paymaya",
-}
-
-export enum EWalletType {
-  gcash = "gcash",
-  grab_pay = "grab_pay",
-}

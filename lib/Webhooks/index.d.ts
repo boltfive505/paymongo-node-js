@@ -1,4 +1,4 @@
-import { WebhookParams, WebhookResponse } from "./types";
+import { WebhookParams, WebhookResponse } from './types';
 declare class Webhooks {
     private secret;
     private path;

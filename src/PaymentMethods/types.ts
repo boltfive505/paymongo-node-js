@@ -1,11 +1,11 @@
-import { BillingDetails, CardType } from "../utils/types";
+import { BillingDetails } from '../utils/types';
 
-export { BillingDetails } from "../utils/types";
+export { BillingDetails } from '../utils/types';
 
 export interface PaymentMethodParams {
   data: {
     attributes: {
-      type: CardType;
+      type: 'card' | 'paymaya';
       details: {
         card_number: string;
         exp_month: number;

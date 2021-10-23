@@ -1,8 +1,8 @@
-import { BillingDetails, EWalletType } from "../utils/types";
+import { BillingDetails } from '../utils/types';
 export interface SourcesParams {
     data: {
         attributes: {
-            type: EWalletType;
+            type: 'gcash' | 'grab_pay';
             amount: number;
             currency: string;
             redirect: {
@@ -30,7 +30,7 @@ export interface SourcesResponse {
             };
             status: string;
             statement_descriptor: string;
-            type: EWalletType;
+            type: 'gcash' | 'grab_pay';
             created_at: number;
             updated_at: number;
         };

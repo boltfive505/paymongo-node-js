@@ -1,4 +1,4 @@
-import { PaymentIntentParams, PaymentIntentResponse, PaymentIntentAttachParams } from "./types";
+import { PaymentIntentParams, PaymentIntentResponse, PaymentIntentAttachParams } from './types';
 declare class PaymentIntents {
     private secret;
     private path;

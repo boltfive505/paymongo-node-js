@@ -1,12 +1,11 @@
-import { CardType } from "../utils/types";
 export interface PaymentIntentParams {
     data: {
         attributes: {
             amount: number;
-            payment_method_allowed: Array<CardType>;
+            payment_method_allowed: ('card' | 'paymaya')[];
             payment_method_options?: {
                 card: {
-                    request_three_d_secure: "any";
+                    request_three_d_secure: 'any';
                 };
             };
             currency: string;
@@ -30,12 +29,12 @@ export interface PaymentIntentResponse {
             created_at: number;
             updated_at: number;
             last_payment_error: any;
-            payment_method_allowed: Array<CardType>;
+            payment_method_allowed: ('card' | 'paymaya')[];
             payments: any;
             next_action: any;
             payment_method_options: {
                 card: {
-                    request_three_d_secure: "any";
+                    request_three_d_secure: 'any';
                 };
             };
         };

@@ -1,4 +1,4 @@
-import { SourcesParams, SourcesResponse } from "./types";
+import { SourcesParams, SourcesResponse } from './types';
 declare class Sources {
     private secret;
     private path;

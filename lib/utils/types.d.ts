@@ -11,12 +11,4 @@ export interface BillingDetails {
     email: string;
     phone: string;
 }
-export declare enum CardType {
-    card = "card",
-    paymaya = "paymaya"
-}
-export declare enum EWalletType {
-    gcash = "gcash",
-    grab_pay = "grab_pay"
-}
 //# sourceMappingURL=types.d.ts.map

@@ -1,7 +1,7 @@
-import { BillingDetails, EWalletType } from "../utils/types";
+import { BillingDetails } from '../utils/types';
 interface PaymentSource {
     id: string;
-    type: EWalletType;
+    type: 'gcash' | 'grab_pay';
 }
 export interface PaymentsParams {
     data: {
@@ -49,7 +49,7 @@ export interface PaymentsResponse {
 }
 export interface PaymentList {
     has_more: boolean;
-    data: Array<PaymentItem>;
+    data: PaymentItem[];
 }
 export {};
 //# sourceMappingURL=types.d.ts.map

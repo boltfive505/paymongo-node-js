@@ -1,9 +1,9 @@
-import "./polyfill";
-import PaymentMethods from "./PaymentMethods";
-import PaymentIntents from "./PaymentIntents";
-import Payments from "./Payments";
-import Sources from "./Sources";
-import Webhooks from "./Webhooks";
+import './polyfill';
+import PaymentMethods from './PaymentMethods';
+import PaymentIntents from './PaymentIntents';
+import Payments from './Payments';
+import Sources from './Sources';
+import Webhooks from './Webhooks';
 
 class Paymongo {
   paymentMethods: PaymentMethods;
@@ -13,7 +13,7 @@ class Paymongo {
   webhooks: Webhooks;
 
   constructor(secret: string) {
-    if (!secret || secret.length === 0) throw "API key is required";
+    if (!secret || secret.length === 0) throw new ReferenceError('API key is required');
 
     this.paymentMethods = new PaymentMethods(secret);
     this.paymentIntents = new PaymentIntents(secret);
