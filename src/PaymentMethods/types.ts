@@ -5,7 +5,7 @@ export { BillingDetails } from '../utils/types';
 export interface PaymentMethodParams {
   data: {
     attributes: {
-      type: 'card' | 'paymaya';
+      type: 'card' | 'paymaya' | string;
       details: {
         card_number: string;
         exp_month: number;

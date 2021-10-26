@@ -3,7 +3,7 @@ import { BillingDetails } from '../utils/types';
 export interface SourcesParams {
   data: {
     attributes: {
-      type: 'gcash' | 'grab_pay';
+      type: 'gcash' | 'grab_pay' | string;
       amount: number;
       currency: string;
       redirect: { success: string; failed: string };
@@ -27,9 +27,9 @@ export interface SourcesResponse {
         failed: string;
         success: string;
       };
-      status: string;
+      status: 'pending' | 'chargeable' | 'cancelled' | 'expired' | 'paid' | string;
       statement_descriptor: string;
-      type: 'gcash' | 'grab_pay';
+      type: 'gcash' | 'grab_pay' | string;
       created_at: number;
       updated_at: number;
     };

@@ -1,14 +1,8 @@
-enum WebhookEvent {
-  'source.chargeable' = 'source.chargeable',
-  'payment.paid' = 'payment.paid',
-  'payment.failed' = 'payment.failed',
-}
-
 export interface WebhookParams {
   data: {
     attributes: {
       url: string;
-      events: WebhookEvent[];
+      events: ('source.chargeable' | 'payment.paid' | 'payment.failed' | string)[];
     };
   };
 }
@@ -19,9 +13,9 @@ interface WebhookItem {
   attributes: {
     livemode: boolean;
     secret_key: string;
-    status: string;
+    status: 'enabled' | 'disabled' | string;
     url: string;
-    events: WebhookEvent[];
+    events: ('source.chargeable' | 'payment.paid' | 'payment.failed' | string)[];
     created_at: number;
     updated_at: number;
   };

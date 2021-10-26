@@ -1,15 +1,16 @@
 {
-  "name": "paymongo-node-js",
-  "version": "1.0.0",
+  "name": "@boltfive505/paymongo-node-js",
+  "version": "1.2.3",
   "description": "My personal paymongo nodejs library (mainly for React Native Expo)",
   "main": "lib/index.js",
   "typings": "lib/index.js",
   "types": "lib",
   "scripts": {
     "test": "jest --verbose false --config jestconfig.json",
-    "prebuild": "rimraf dist && tsc && npm run test",
+    "prebuild": "rimraf dist && tsc",
     "build": "rollup -c rollup.config.js",
     "build-only": "rollup -c rollup.config.js",
+    "publish": "npm publish --access=public",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },

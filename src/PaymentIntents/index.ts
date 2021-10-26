@@ -18,10 +18,10 @@ class PaymentIntents {
     return makeRequest<object, PaymentIntentResponse>(`${this.path}/${id}`, 'GET', this.secret, {});
   }
 
-  attach(paymentMethodId: string, data: PaymentIntentAttachParams) {
-    if (!paymentMethodId || paymentMethodId.length === 0) throw new ReferenceError('PaymentMethod id is required');
+  attach(paymentIntentId: string, data: PaymentIntentAttachParams) {
+    if (!paymentIntentId || paymentIntentId.length === 0) throw new ReferenceError('PaymentIntent id is required');
     return makeRequest<PaymentIntentAttachParams, PaymentIntentResponse>(
-      `${this.path}/${paymentMethodId}/attach`,
+      `${this.path}/${paymentIntentId}/attach`,
       'POST',
       this.secret,
       data,
