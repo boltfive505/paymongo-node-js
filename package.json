@@ -1,6 +1,6 @@
 {
   "name": "@boltfive505/paymongo-node-js",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "My personal paymongo nodejs library (mainly for React Native Expo)",
   "main": "lib/index.js",
   "typings": "lib/index.js",

@@ -31,7 +31,7 @@ export interface PaymentIntentResponse {
       next_action?: {
         type: 'redirect' | string;
         redirect: {
-          return_url: string;
+          return_url?: string;
           url: string;
         };
       }; // to be set - dictionary
@@ -46,6 +46,6 @@ export interface PaymentIntentResponse {
 
 export interface PaymentIntentAttachParams {
   data: {
-    attributes: { payment_method: string; return_url: string };
+    attributes: { payment_method: string; return_url?: string };
   };
 }
