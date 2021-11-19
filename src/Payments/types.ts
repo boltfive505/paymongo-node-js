@@ -1,8 +1,8 @@
-import { BillingDetails } from '../utils/types';
+import { BillingDetails } from "~utils/types";
 
 interface PaymentSource {
   id: string;
-  type: 'gcash' | 'grab_pay' | string;
+  type: "gcash" | "grab_pay" | string;
 }
 
 export interface PaymentsParams {
@@ -37,7 +37,7 @@ interface PaymentItem {
     payout?: any;
     source: PaymentSource;
     statement_descriptor?: string;
-    status: 'pending' | 'failed' | 'paid' | string;
+    status: "pending" | "failed" | "paid" | string;
     tax_amount?: any;
     refunds?: any;
     taxes?: any;
